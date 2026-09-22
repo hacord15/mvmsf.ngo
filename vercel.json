@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/about-us", "dest": "/about-us.html" },
+    { "src": "/our-work", "dest": "/our-work.html" },
+    { "src": "/get-involved", "dest": "/get-involved.html" },
+    { "src": "/impact-and-stories", "dest": "/impact-and-stories.html" },
+    { "src": "/legal", "dest": "/legal.html" },
+    { "src": "/contact-us", "dest": "/contact-us.html" },
+    { "src": "/donate", "dest": "/donate.html" }
+  ]
+}
