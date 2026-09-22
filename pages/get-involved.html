@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Involved | Mahesh Vidyasagar Memorial School Foundation</title>
+  <meta
+    name="description"
+    content="Volunteer, intern, mentor, fundraise or partner with Mahesh Vidyasagar Memorial School Foundation. Apply below and join our volunteer & intern ecosystem."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Tailwind (keep this config identical to index.html) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#F06C0B",
+            secondary: "#D95F08",
+            navy: "#12284C",
+            dark: "#222222",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            nunito: ["Nunito", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+            manjari: ["Manjari", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+      background: #ffffff;
+      color: #222222;
+    }
+    #site-header.is-scrolled #top-bar {
+      display: none !important;
+    }
+    .dots-pattern {
+      background-image: radial-gradient(rgba(240, 108, 11, 0.35) 2px, transparent 2px);
+      background-size: 18px 18px;
+    }
+    /* Multi-select "chips" for Area of Interest */
+    .interest-chip {
+      cursor: pointer;
+      user-select: none;
+    }
+    .interest-chip input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .interest-chip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 9999px;
+      border: 1.5px solid #e5e7eb;
+      background: #fff;
+      padding: 9px 16px;
+      font-family: "Quicksand", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #666666;
+      transition: all 0.2s ease;
+    }
+    .interest-chip input:checked + span {
+      border-color: #f06c0b;
+      background: #f06c0b;
+      color: #fff;
+    }
+    .interest-chip:hover span {
+      border-color: #f06c0b;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header (loaded by /js/include.js) -->
+  <div data-include="/components/header.html"></div>
+
+  <main>
+    <!-- =========================================================
+         PAGE BANNER
+    ========================================================== -->
+    <section class="relative overflow-hidden bg-[#fdf8f3] pb-16 pt-[175px]">
+      <div class="pointer-events-none absolute left-8 top-28 z-0 lg:left-16 lg:top-36">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-[#F06C0B] lg:h-20 lg:w-20">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+          />
+        </svg>
+      </div>
+      <div class="pointer-events-none absolute right-0 top-0 z-0 h-64 w-64 lg:h-96 lg:w-96">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full text-[#F06C0B]/30">
+          <path d="M 200 20 Q 160 70 130 110 Q 100 150 20 150" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <div class="inline-block rounded-full bg-[#F06C0B] px-6 py-2 font-quicksand text-sm font-semibold text-white">
+          Volunteer · Intern · Partner
+        </div>
+
+        <h1 class="mt-6 font-quicksand text-4xl font-bold leading-[1.1] text-black sm:text-5xl lg:text-[58px] lg:leading-[1.08]">
+          Get Involved
+        </h1>
+
+        <p class="mx-auto mt-5 max-w-2xl font-nunito text-base font-medium leading-7 text-gray-600 sm:text-lg">
+          Volunteer, intern, mentor, fundraise or partner with us — there's a
+          place for your time, skills and support in our work.
+        </p>
+
+        <nav aria-label="Breadcrumb" class="mt-6 flex items-center justify-center gap-2 font-nunito text-sm font-semibold">
+          <a href="/" class="text-[#666666] transition-colors hover:text-primary">Home</a>
+          <span class="text-[#F06C0B]">/</span>
+          <span class="text-black">Get Involved</span>
+        </nav>
+
+        <a
+          href="#apply"
+          class="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary px-8 py-3.5 font-quicksand text-sm font-semibold text-white shadow-[0_7px_5px_-2px_rgba(0,0,0,0.11)] transition-all hover:bg-[#d95f08]"
+        >
+          Apply Now <i class="fa-solid fa-arrow-down text-xs"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         OBJECTIVE 3 — Volunteer & Intern Ecosystem
+    ========================================================== -->
+    <section class="bg-white px-6 pt-[90px] lg:px-[35px]">
+      <div class="mx-auto max-w-7xl">
+       
+        <h2 class="mt-2 text-center font-quicksand text-[32px] font-bold text-[#111111] sm:text-[44px]">
+          Building Our Volunteer &amp; Intern Ecosystem
+        </h2>
+        <p class="mx-auto mt-3 max-w-2xl text-center font-manjari text-[17px] font-medium leading-[27px] text-dark">
+          Skill Development for Young Professionals
+        </p>
+        <div class="mt-3 flex justify-center gap-2">
+          <span class="rounded-full bg-[#E8F1F6] px-4 py-1.5 text-xs font-bold text-[#1A73A7]">SDG 4</span>
+          <span class="rounded-full bg-[#F3F7E8] px-4 py-1.5 text-xs font-bold text-[#5B8C1F]">SDG 8</span>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-[20px] border-[3px] border-dashed p-8 transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #C017297A">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full" style="background-color: #F9E8EA">
+              <i class="fa-solid fa-sack-dollar text-lg" style="color: #C01729"></i>
+            </span>
+            <h3 class="mt-4 font-quicksand text-lg font-bold text-[#191919]">Fundraising – HNI</h3>
+            <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+              Identify &amp; approach HNI prospects; manage relationships &amp; pledges.
+            </p>
+          </div>
+
+          <div class="rounded-[20px] border-[3px] border-dashed p-8 transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #E974227A">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full" style="background-color: #FDF1E8">
+              <i class="fa-solid fa-building text-lg" style="color: #E97422"></i>
+            </span>
+            <h3 class="mt-4 font-quicksand text-lg font-bold text-[#191919]">Fundraising – CSR</h3>
+            <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+              Map CSR mandates; submit proposals; engage corporate partners.
+            </p>
+          </div>
+
+          <div class="rounded-[20px] border-[3px] border-dashed p-8 transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #1A73A77A">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full" style="background-color: #E8F1F6">
+              <i class="fa-solid fa-hand-holding-dollar text-lg" style="color: #1A73A7"></i>
+            </span>
+            <h3 class="mt-4 font-quicksand text-lg font-bold text-[#191919]">Fundraising – Individuals</h3>
+            <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+              Run crowdfunding pages; manage micro-donation campaigns.
+            </p>
+          </div>
+
+          <div class="rounded-[20px] border-[3px] border-dashed p-8 transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #FBC0327A">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full" style="background-color: #FFF9EA">
+              <i class="fa-solid fa-people-arrows text-lg" style="color: #FBC032"></i>
+            </span>
+            <h3 class="mt-4 font-quicksand text-lg font-bold text-[#191919]">Donor Engagement</h3>
+            <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+              Impact reporting, thank-you communications, retention strategy.
+            </p>
+          </div>
+
+          <div class="rounded-[20px] border-[3px] border-dashed p-8 transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #6B195A7A">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full" style="background-color: #F6E9F3">
+              <i class="fa-solid fa-film text-lg" style="color: #6B195A"></i>
+            </span>
+            <h3 class="mt-4 font-quicksand text-lg font-bold text-[#191919]">Content Clippers</h3>
+            <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+              Short-form content, video clips, reel editing for social campaigns.
+            </p>
+          </div>
+
+          <div class="rounded-[20px] border-[3px] border-dashed p-8 transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #5B8C1F7A">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full" style="background-color: #F3F7E8">
+              <i class="fa-solid fa-hashtag text-lg" style="color: #5B8C1F"></i>
+            </span>
+            <h3 class="mt-4 font-quicksand text-lg font-bold text-[#191919]">Social Media Marketer</h3>
+            <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+              Manage platforms; grow digital presence; run awareness drives.
+            </p>
+          </div>
+        </div>
+
+        <!-- Certificate note -->
+        <div class="mx-auto mt-8 flex max-w-3xl items-center gap-4 rounded-[20px] bg-navy px-8 py-6 text-white">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#FBC032] text-navy">
+            <i class="fa-solid fa-certificate"></i>
+          </span>
+          <p class="text-sm font-semibold leading-6">
+            All Interns/Volunteers receive a formal Appointment Letter +
+            Appreciation/Experience Certificate upon completion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         OBJECTIVE 4 — Online Skill Development & Training
+    ========================================================== -->
+    <section class="bg-white px-6 pb-4 pt-[100px] lg:px-[35px]">
+      <div class="mx-auto max-w-7xl">
+       
+        <h2 class="mt-2 text-center font-quicksand text-[32px] font-bold text-[#111111] sm:text-[44px]">
+          Online Skill Development &amp; Training
+        </h2>
+        <p class="mx-auto mt-3 max-w-2xl text-center font-manjari text-[17px] font-medium leading-[27px] text-dark">
+          Empowering interns and community youth with employable skills
+        </p>
+        <div class="mt-3 flex justify-center gap-2">
+          <span class="rounded-full bg-[#E8F1F6] px-4 py-1.5 text-xs font-bold text-[#1A73A7]">SDG 4</span>
+          <span class="rounded-full bg-[#F3F7E8] px-4 py-1.5 text-xs font-bold text-[#5B8C1F]">SDG 8</span>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+          <!-- Training modules -->
+          <div class="rounded-[24px] bg-[#fdf8f3] p-8 sm:p-9">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#F06C0B] text-white">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </span>
+            <h3 class="mt-5 font-quicksand text-xl font-bold text-[#222222]">Expert-Led Online Training Modules</h3>
+            <ul class="mt-4 flex flex-col gap-3 text-sm font-semibold leading-6 text-[#666666]">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Lead Scoring &amp; Donor Qualification</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Prospecting Techniques for NGOs</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Sales &amp; Persuasion for Social Impact</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Email &amp; Digital Outreach Mastery</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Social Media for Non-Profits</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Impact Measurement &amp; Reporting</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Storytelling for Fundraising</li>
+            </ul>
+          </div>
+
+          <!-- Programme model -->
+          <div class="rounded-[24px] bg-navy p-8 text-white sm:p-9">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FBC032] text-navy">
+              <i class="fa-solid fa-diagram-project"></i>
+            </span>
+            <h3 class="mt-5 font-quicksand text-xl font-bold">Programme Model</h3>
+            <ul class="mt-4 flex flex-col gap-3 text-sm font-semibold leading-6 text-white/85">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-[#FBC032]"></i> Weekly live sessions with industry experts</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-[#FBC032]"></i> Assignments + peer review system</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-[#FBC032]"></i> Certificate issued on successful completion</li>
+            </ul>
+          </div>
+
+          <!-- Who benefits -->
+          <div class="rounded-[24px] bg-[#fdf8f3] p-8 sm:p-9">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#F06C0B] text-white">
+              <i class="fa-solid fa-people-group"></i>
+            </span>
+            <h3 class="mt-5 font-quicksand text-xl font-bold text-[#222222]">Who Benefits?</h3>
+            <ul class="mt-4 flex flex-col gap-3 text-sm font-semibold leading-6 text-[#666666]">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Intern Associates enrolled with MVMSF</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Community youth (18–30) seeking experience and engagement</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> First-generation professionals building careers</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-1 text-xs text-primary"></i> Women re-entering the workforce</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         APPLICATION FORM
+    ========================================================== -->
+    <section id="apply" class="scroll-mt-28 bg-white px-6 py-[100px] lg:px-[35px]">
+      <div class="mx-auto max-w-4xl">
+        <div class="rounded-[28px] bg-[#fdf8f3] p-8 sm:p-12">
+          <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+            Ready To Join Us?
+          </p>
+          <h2 class="mt-2 text-center font-quicksand text-[30px] font-bold leading-[40px] text-[#222222] sm:text-[38px] sm:leading-[48px]">
+            Get Involved Application Form
+          </h2>
+          <p class="mx-auto mt-3 max-w-xl text-center text-sm font-medium leading-6 text-[#666666]">
+            Fill in the form below and our team will get in touch about next steps.
+          </p>
+
+          <form id="involve-form" class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2" novalidate>
+
+            <!-- Full Name -->
+            <div>
+              <label for="gi-name" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Full Name <span class="text-[#F06C0B]">*</span>
+              </label>
+              <input id="gi-name" name="fullName" type="text" required autocomplete="name" placeholder="Your full name"
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="gi-email" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Email Address <span class="text-[#F06C0B]">*</span>
+              </label>
+              <input id="gi-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label for="gi-phone" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Phone Number <span class="text-[#F06C0B]">*</span>
+              </label>
+              <input id="gi-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+91 00000 00000"
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+
+            <!-- City -->
+            <div>
+              <label for="gi-city" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                City <span class="text-[#F06C0B]">*</span>
+              </label>
+              <input id="gi-city" name="city" type="text" required autocomplete="address-level2" placeholder="Your city"
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+
+            <!-- I Want to -->
+            <div class="sm:col-span-2">
+              <label for="gi-want" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                I Want to <span class="text-[#F06C0B]">*</span>
+              </label>
+              <select id="gi-want" name="iWantTo" required
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20">
+                <option value="" disabled selected>Select an option</option>
+                <option>Volunteer</option>
+                <option>Internship</option>
+                <option>Donate</option>
+                <option>Corporate / CSR Partnership</option>
+                <option>Fundraise</option>
+                <option>Become a Mentor</option>
+                <option>Join Training Program</option>
+                <option>Partner with Us</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Area of Interest (multi-select as chips) -->
+            <div class="sm:col-span-2">
+              <label class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Area of Interest <span class="text-[#F06C0B]">*</span>
+                <span class="ml-1 font-nunito text-xs font-medium normal-case text-[#999999]">(select all that apply)</span>
+              </label>
+              <div id="gi-interest-group" class="flex flex-wrap gap-2.5">
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Fundraising – HNI" />
+                  <span>Fundraising – HNI</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Fundraising – CSR" />
+                  <span>Fundraising – CSR</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Fundraising – Individuals" />
+                  <span>Fundraising – Individuals</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Donor Engagement" />
+                  <span>Donor Engagement</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Content Creation" />
+                  <span>Content Creation</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Social Media Marketing" />
+                  <span>Social Media Marketing</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Digital Marketing" />
+                  <span>Digital Marketing</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Online Training" />
+                  <span>Online Training</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Teaching / Education" />
+                  <span>Teaching / Education</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Community Outreach" />
+                  <span>Community Outreach</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Event Management" />
+                  <span>Event Management</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Research & Documentation" />
+                  <span>Research &amp; Documentation</span>
+                </label>
+                <label class="interest-chip">
+                  <input type="checkbox" name="areaOfInterest" value="Other" />
+                  <span>Other</span>
+                </label>
+              </div>
+              <p id="gi-interest-error" class="mt-2 hidden text-xs font-semibold text-red-600">
+                Please select at least one area of interest.
+              </p>
+            </div>
+
+            <!-- Skills / Expertise -->
+            <div class="sm:col-span-2">
+              <label for="gi-skills" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Skills / Expertise
+              </label>
+              <textarea id="gi-skills" name="skills" rows="3" placeholder="e.g. graphic design, public speaking, Excel, teaching..."
+                class="w-full resize-y rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            </div>
+
+            <!-- Availability -->
+            <div>
+              <label for="gi-availability" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Availability <span class="text-[#F06C0B]">*</span>
+              </label>
+              <select id="gi-availability" name="availability" required
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20">
+                <option value="" disabled selected>Select availability</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Weekends</option>
+                <option>Evenings</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+
+            <!-- LinkedIn -->
+            <div>
+              <label for="gi-linkedin" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                LinkedIn Profile
+              </label>
+              <input id="gi-linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/yourname"
+                class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            </div>
+
+            <!-- Experience -->
+            <div class="sm:col-span-2">
+              <label for="gi-experience" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Experience
+              </label>
+              <textarea id="gi-experience" name="experience" rows="3" placeholder="Relevant work, volunteering or project experience..."
+                class="w-full resize-y rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            </div>
+
+            <!-- Message -->
+            <div class="sm:col-span-2">
+              <label for="gi-message" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Message
+              </label>
+              <textarea id="gi-message" name="message" rows="3" placeholder="Anything else you'd like us to know?"
+                class="w-full resize-y rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            </div>
+
+            <!-- Resume / CV -->
+            <div class="sm:col-span-2">
+              <label for="gi-resume" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                Resume / CV
+                <span class="ml-1 font-nunito text-xs font-medium normal-case text-[#999999]">(PDF or Word, max 5MB)</span>
+              </label>
+
+              <label
+                for="gi-resume"
+                class="flex cursor-pointer items-center justify-between gap-3 rounded-[10px] border-2 border-dashed border-gray-300 bg-white px-5 py-4 transition-colors hover:border-primary"
+              >
+                <span id="gi-resume-label" class="flex items-center gap-2 font-nunito text-sm font-semibold text-[#666666]">
+                  <i class="fa-solid fa-cloud-arrow-up text-primary"></i> Click to upload your resume
+                </span>
+                <span class="shrink-0 rounded-full border-2 border-primary px-4 py-1.5 font-quicksand text-xs font-bold text-primary">Browse</span>
+              </label>
+              <input id="gi-resume" name="resume" type="file" accept=".pdf,.doc,.docx" class="hidden" />
+            </div>
+
+            <!-- Consent -->
+            <div class="sm:col-span-2">
+              <label class="flex cursor-pointer items-start gap-3">
+                <input
+                  id="gi-consent"
+                  name="consent"
+                  type="checkbox"
+                  required
+                  class="mt-1 h-5 w-5 shrink-0 rounded border-gray-300 text-primary focus:ring-primary"
+                />
+                <span class="text-sm font-medium leading-6 text-[#666666]">
+                  I consent to MVMSF storing and using my information above to
+                  process this application and get in touch with me.
+                  <span class="text-[#F06C0B]">*</span>
+                </span>
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <div class="sm:col-span-2">
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary px-9 py-[15px] font-quicksand text-[15px] font-semibold text-white shadow-[0_7px_5px_-2px_rgba(0,0,0,0.11)] transition-colors hover:border-secondary hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <span id="gi-btn-label">Submit Application</span>
+                <i class="fa-solid fa-paper-plane text-sm"></i>
+              </button>
+
+              <p id="gi-success" role="status" class="mt-5 hidden rounded-xl bg-green-50 px-5 py-3 text-sm font-semibold text-green-700">
+                Thank you! Your application has been received. We'll be in touch soon.
+              </p>
+              <p id="gi-error" role="alert" class="mt-5 hidden rounded-xl bg-red-50 px-5 py-3 text-sm font-semibold text-red-700">
+                Please fill in all required fields, then try again.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (loaded by /js/include.js) -->
+  <div data-include="/components/footer.html"></div>
+
+  <!-- Site-wide header/footer loader -->
+  <script src="/js/include.js"></script>
+
+  <!-- =========================================================
+       Page script — everything the form needs, in one place:
+       1) Resume filename preview
+       2) Area of Interest (at least one required, since real
+          <select multiple> is hard to use on mobile — chips instead)
+       3) Validate + submit (demo mode unless the form has an `action`)
+  ========================================================== -->
+  <script>
+    (function () {
+      var form = document.getElementById("involve-form");
+      if (!form) return;
+
+      var success = document.getElementById("gi-success");
+      var error = document.getElementById("gi-error");
+      var button = form.querySelector('button[type="submit"]');
+      var label = document.getElementById("gi-btn-label");
+      var interestError = document.getElementById("gi-interest-error");
+
+      // 1) Resume filename preview
+      var resumeInput = document.getElementById("gi-resume");
+      var resumeLabel = document.getElementById("gi-resume-label");
+      resumeInput.addEventListener("change", function () {
+        if (resumeInput.files && resumeInput.files[0]) {
+          resumeLabel.innerHTML =
+            '<i class="fa-solid fa-file-circle-check text-primary"></i> ' + resumeInput.files[0].name;
+        } else {
+          resumeLabel.innerHTML =
+            '<i class="fa-solid fa-cloud-arrow-up text-primary"></i> Click to upload your resume';
+        }
+      });
+
+      function selectedInterests() {
+        return Array.prototype.slice
+          .call(form.querySelectorAll('input[name="areaOfInterest"]:checked'))
+          .map(function (el) { return el.value; });
+      }
+
+      function hideMessages() {
+        success.classList.add("hidden");
+        error.classList.add("hidden");
+        interestError.classList.add("hidden");
+      }
+
+      function setLoading(loading) {
+        button.disabled = loading;
+        label.textContent = loading ? "Submitting..." : "Submit Application";
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        hideMessages();
+
+        var interestsOk = selectedInterests().length > 0;
+        if (!interestsOk) interestError.classList.remove("hidden");
+
+        if (!form.checkValidity() || !interestsOk) {
+          error.classList.remove("hidden");
+          var firstInvalid = form.querySelector(":invalid");
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        var endpoint = form.getAttribute("action");
+
+        // Demo mode: no endpoint configured yet
+        if (!endpoint) {
+          console.warn("[get-involved] No form action set — application was NOT sent. Add an endpoint to the <form>.");
+          success.classList.remove("hidden");
+          form.reset();
+          resumeLabel.innerHTML =
+            '<i class="fa-solid fa-cloud-arrow-up text-primary"></i> Click to upload your resume';
+          return;
+        }
+
+        setLoading(true);
+        fetch(endpoint, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error(res.status + " " + res.statusText);
+            success.classList.remove("hidden");
+            form.reset();
+          })
+          .catch(function (err) {
+            console.error("[get-involved] Submit failed", err);
+            error.textContent = "Sorry, something went wrong. Please try again in a moment.";
+            error.classList.remove("hidden");
+          })
+          .finally(function () {
+            setLoading(false);
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

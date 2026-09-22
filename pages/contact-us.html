@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Mahesh Vidyasagar Memorial School Foundation</title>
+  <meta
+    name="description"
+    content="Get in touch with Mahesh Vidyasagar Memorial School Foundation. Send us a message, find our address on the map, or reach us on social media."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Tailwind (keep this config identical to index.html) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#F06C0B",
+            secondary: "#D95F08",
+            navy: "#12284C",
+            dark: "#222222",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            nunito: ["Nunito", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+            manjari: ["Manjari", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+      background: #ffffff;
+      color: #222222;
+    }
+    /* Header: hide the top announcement bar once the page is scrolled */
+    #site-header.is-scrolled #top-bar {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header (loaded by /js/include.js) -->
+  <div data-include="/components/header.html"></div>
+
+  <main>
+    <!-- =========================================================
+         PAGE BANNER
+    ========================================================== -->
+    <section class="relative overflow-hidden bg-[#fdf8f3] pb-16 pt-[175px]">
+      <!-- Decorative heart - left -->
+      <div class="pointer-events-none absolute left-8 top-28 z-0 lg:left-16 lg:top-36">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-14 w-14 text-[#F06C0B] lg:h-20 lg:w-20"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      <!-- Decorative curve - top right -->
+      <div class="pointer-events-none absolute right-0 top-0 z-0 h-64 w-64 lg:h-96 lg:w-96">
+        <svg
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-full w-full text-[#F06C0B]/30"
+        >
+          <path
+            d="M 200 20 Q 160 70 130 110 Q 100 150 20 150"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      <!-- Decorative curve - bottom right -->
+      <div class="pointer-events-none absolute bottom-0 right-0 z-0 h-48 w-48 lg:h-72 lg:w-72">
+        <svg
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-full w-full text-[#F06C0B]/30"
+        >
+          <path
+            d="M 200 100 Q 150 100 100 150 Q 50 200 0 200"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <!-- <div
+          class="inline-block rounded-full bg-[#F06C0B] px-6 py-2 font-quicksand text-sm font-semibold text-white"
+        >
+          We'd Love To Hear From You
+        </div> -->
+
+        <h1
+          class="mt-6 font-quicksand text-4xl font-bold leading-[1.1] text-black sm:text-5xl lg:text-[60px] lg:leading-[1.08]"
+        >
+          Contact Us
+        </h1>
+
+        <p class="mx-auto mt-5 max-w-2xl font-nunito text-base font-medium leading-7 text-gray-600 sm:text-lg">
+          Have a question, want to volunteer, or looking to partner with us?
+          Send us a message and our team will get back to you soon.
+        </p>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mt-6 flex items-center justify-center gap-2 font-nunito text-sm font-semibold">
+          <a href="/" class="text-[#666666] transition-colors hover:text-primary">Home</a>
+          <span class="text-[#F06C0B]">/</span>
+          <span class="text-black">Contact Us</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT — form + map (left) | details + social (right)
+    ========================================================== -->
+    <section class="bg-white px-6 pb-[100px] pt-[90px] lg:px-[35px]">
+      <div class="mx-auto grid max-w-7xl items-start gap-10 lg:grid-cols-[1.45fr_1fr]">
+
+        <!-- ===================== LEFT: FORM + MAP ===================== -->
+        <div>
+          <!-- Form -->
+          <div class="rounded-[24px] bg-[#fdf8f3] p-8 sm:p-10">
+            <p class="font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+              Get In Touch
+            </p>
+
+            <h2 class="mt-2 font-quicksand text-[32px] font-bold leading-[42px] text-[#222222] sm:text-[40px] sm:leading-[50px]">
+              Send Us A Message
+            </h2>
+
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              Fill in the form below and we'll respond as soon as we can.
+            </p>
+
+            <!--
+              Form endpoint:
+              - Leave `action` out  -> demo mode (shows the success message, nothing is sent)
+              - Add e.g. action="https://formspree.io/f/your-id" -> js/contact.js will POST the form there
+            -->
+            <form id="contact-form" class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2" novalidate>
+              <div>
+                <label for="cf-name" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                  Full Name <span class="text-[#F06C0B]">*</span>
+                </label>
+                <input
+                  id="cf-name"
+                  name="name"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  placeholder="Your full name"
+                  class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+
+              <div>
+                <label for="cf-email" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                  Email Address <span class="text-[#F06C0B]">*</span>
+                </label>
+                <input
+                  id="cf-email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+
+              <div>
+                <label for="cf-phone" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                  Phone Number
+                </label>
+                <input
+                  id="cf-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+91 00000 00000"
+                  class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+
+              <div>
+                <label for="cf-subject" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                  Subject <span class="text-[#F06C0B]">*</span>
+                </label>
+                <input
+                  id="cf-subject"
+                  name="subject"
+                  type="text"
+                  required
+                  placeholder="How can we help?"
+                  class="w-full rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="cf-message" class="mb-2 block font-quicksand text-sm font-bold text-[#222222]">
+                  Message <span class="text-[#F06C0B]">*</span>
+                </label>
+                <textarea
+                  id="cf-message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="Write your message here..."
+                  class="w-full resize-y rounded-[10px] border border-gray-200 bg-white px-5 py-4 font-nunito text-base font-medium text-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                ></textarea>
+              </div>
+
+              <div class="sm:col-span-2">
+                <button
+                  type="submit"
+                  class="inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary px-9 py-[15px] font-quicksand text-[15px] font-semibold text-white shadow-[0_7px_5px_-2px_rgba(0,0,0,0.11)] transition-colors hover:border-secondary hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <span id="cf-btn-label">Send Message</span>
+                  <i class="fa-solid fa-paper-plane text-sm"></i>
+                </button>
+
+                <!-- Status messages -->
+                <p
+                  id="contact-success"
+                  role="status"
+                  class="mt-5 hidden rounded-xl bg-green-50 px-5 py-3 text-sm font-semibold text-green-700"
+                >
+                  Thank you! Your message has been sent. We'll get back to you soon.
+                </p>
+                <p
+                  id="contact-error"
+                  role="alert"
+                  class="mt-5 hidden rounded-xl bg-red-50 px-5 py-3 text-sm font-semibold text-red-700"
+                >
+                  Please fill in all required fields correctly, then try again.
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Google Map (under the form) -->
+          <!--
+            To pin your exact address: open Google Maps -> search your address ->
+            Share -> Embed a map -> copy the iframe `src` and replace the one below.
+            The `q=` value below is only a placeholder view.
+          -->
+          <div class="mt-8 overflow-hidden rounded-[24px] shadow-lg">
+            <iframe
+              title="Our location on Google Maps"
+              src="https://maps.google.com/maps?q=India&z=5&output=embed"
+              class="block h-[380px] w-full border-0"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- ================= RIGHT: DETAILS + SOCIAL ================= -->
+        <aside class="flex flex-col gap-8 lg:sticky lg:top-32">
+          <!-- Contact details -->
+          <div class="rounded-[24px] bg-navy p-8 text-white sm:p-10">
+            <p class="font-nunito text-sm font-bold uppercase tracking-[2px] text-[#FBC032]">
+              Contact Details
+            </p>
+
+            <h2 class="mt-2 font-quicksand text-[28px] font-bold leading-[38px] sm:text-[32px] sm:leading-[42px]">
+              Reach Us Directly
+            </h2>
+
+            <!-- Replace these placeholders with the foundation's real details -->
+            <ul class="mt-8 flex flex-col gap-6">
+              <li class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#FBC032]">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <div>
+                  <p class="font-quicksand text-sm font-bold uppercase tracking-wider text-white/70">Address</p>
+                  <p class="mt-1 text-base font-medium leading-7 text-white">
+                    #8901 Marmora Road Chi Minh City
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#FBC032]">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+                <div>
+                  <p class="font-quicksand text-sm font-bold uppercase tracking-wider text-white/70">Phone</p>
+                  <p class="mt-1 text-base font-medium leading-7 text-white">
+                    <a href="tel:+00035835282" class="transition-colors hover:text-[#FBC032]">+00 035 835 282</a><br />
+                    <a href="tel:+00034965353" class="transition-colors hover:text-[#FBC032]">+00 034 965 353</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#FBC032]">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <div>
+                  <p class="font-quicksand text-sm font-bold uppercase tracking-wider text-white/70">Email</p>
+                  <p class="mt-1 text-base font-medium leading-7 text-white">
+                    <a href="mailto:info@domainname.com" class="transition-colors hover:text-[#FBC032]">info@domainname.com</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social links -->
+          <div class="rounded-[24px] bg-[#fdf8f3] p-8 sm:p-10">
+            <p class="font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+              Stay Connected
+            </p>
+
+            <h2 class="mt-2 font-quicksand text-[28px] font-bold leading-[38px] text-[#222222] sm:text-[32px] sm:leading-[42px]">
+              Follow Us
+            </h2>
+
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              Follow our journey and see the impact your support creates.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-dark shadow-sm transition-colors hover:bg-primary hover:text-white"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-dark shadow-sm transition-colors hover:bg-primary hover:text-white"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-dark shadow-sm transition-colors hover:bg-primary hover:text-white"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Youtube"
+                class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-dark shadow-sm transition-colors hover:bg-primary hover:text-white"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Linkedin"
+                class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-dark shadow-sm transition-colors hover:bg-primary hover:text-white"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (loaded by /js/include.js) -->
+  <div data-include="/components/footer.html"></div>
+
+  <script src="/js/include.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

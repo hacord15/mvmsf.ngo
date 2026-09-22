@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Mahesh Vidyasagar Memorial School Foundation</title>
+  <meta
+    name="description"
+    content="Learn about Mahesh Vidyasagar Memorial School Foundation — our story, mission, vision and the values that guide our work in education, health, nutrition and skill development."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Tailwind (keep this config identical to index.html) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#F06C0B",
+            secondary: "#D95F08",
+            navy: "#12284C",
+            dark: "#222222",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            nunito: ["Nunito", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+            manjari: ["Manjari", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+      background: #ffffff;
+      color: #222222;
+    }
+    /* Header: hide the top announcement bar once the page is scrolled */
+    #site-header.is-scrolled #top-bar {
+      display: none !important;
+    }
+    /* Decorative dotted pattern */
+    .dots-pattern {
+      background-image: radial-gradient(rgba(240, 108, 11, 0.35) 2px, transparent 2px);
+      background-size: 18px 18px;
+    }
+    /* Carousel dots (created by /js/carousel.js) */
+    .carousel-dot {
+      height: 12px;
+      width: 12px;
+      border: 0;
+      border-radius: 9999px;
+      background: #f8d8c2;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .carousel-dot.is-active {
+      width: 32px;
+      background: #f06c0b;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header (loaded by /js/include.js) -->
+  <div data-include="/components/header.html"></div>
+
+  <main>
+    <!-- =========================================================
+         PAGE BANNER
+    ========================================================== -->
+    <section class="relative overflow-hidden bg-[#fdf8f3] pb-16 pt-[175px]">
+      <div class="pointer-events-none absolute left-8 top-28 z-0 lg:left-16 lg:top-36">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-[#F06C0B] lg:h-20 lg:w-20">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+          />
+        </svg>
+      </div>
+
+      <div class="pointer-events-none absolute right-0 top-0 z-0 h-64 w-64 lg:h-96 lg:w-96">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full text-[#F06C0B]/30">
+          <path d="M 200 20 Q 160 70 130 110 Q 100 150 20 150" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+      </div>
+
+      <div class="pointer-events-none absolute bottom-0 right-0 z-0 h-48 w-48 lg:h-72 lg:w-72">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full text-[#F06C0B]/30">
+          <path d="M 200 100 Q 150 100 100 150 Q 50 200 0 200" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <div class="inline-block rounded-full bg-[#F06C0B] px-6 py-2 font-quicksand text-sm font-semibold text-white">
+          Who We Are
+        </div>
+
+        <h1 class="mt-6 font-quicksand text-4xl font-bold leading-[1.1] text-black sm:text-5xl lg:text-[60px] lg:leading-[1.08]">
+          About Us
+        </h1>
+
+        <p class="mx-auto mt-5 max-w-2xl font-nunito text-base font-medium leading-7 text-gray-600 sm:text-lg">
+          Building strong foundations for lasting impact through education,
+          health, nutrition and skill development.
+        </p>
+
+        <nav aria-label="Breadcrumb" class="mt-6 flex items-center justify-center gap-2 font-nunito text-sm font-semibold">
+          <a href="/" class="text-[#666666] transition-colors hover:text-primary">Home</a>
+          <span class="text-[#F06C0B]">/</span>
+          <span class="text-black">About Us</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         OUR STORY — image collage + text
+    ========================================================== -->
+    <section id="story" class="bg-white px-6 pb-[60px] pt-[100px] lg:px-[35px]">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
+
+        <!-- Collage -->
+        <div class="relative pb-10 pl-6 pt-6">
+          <!-- Decorative shapes -->
+          <div class="dots-pattern absolute left-0 top-0 h-40 w-40"></div>
+          <div class="absolute -bottom-2 right-4 h-32 w-32 rounded-full bg-[#FBC032]/40"></div>
+          <div class="absolute right-0 top-2 h-24 w-24 rounded-full border-[3px] border-dashed border-[#F06C0B]/50"></div>
+
+          <div class="relative z-10 flex gap-4">
+            <div class="w-[62%] overflow-hidden rounded-[27px] shadow-xl">
+              <img
+                src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/child-smile.webp"
+                alt="Children supported through education and community initiatives"
+                class="h-[440px] w-full object-cover sm:h-[500px]"
+              />
+            </div>
+
+            <div class="flex w-[38%] flex-col gap-4">
+              <div class="overflow-hidden rounded-[30px] shadow-lg">
+                <img
+                  src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child-smile.webp"
+                  alt="Child smiling"
+                  class="h-[200px] w-full object-cover sm:h-[230px]"
+                />
+              </div>
+              <div class="aspect-square overflow-hidden rounded-full border-4 border-white shadow-lg">
+                <img
+                  src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child.webp"
+                  alt="Child portrait"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating badge -->
+          <div class="absolute bottom-0 left-0 z-20 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#F06C0B] text-white">
+              <i class="fa-solid fa-award"></i>
+            </span>
+            <div>
+              <p class="font-quicksand text-base font-bold leading-tight text-[#222222]">Section 8</p>
+              <p class="text-xs font-semibold text-[#666666]">Not-for-Profit Organisation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div>
+          <p class="font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+            Our Story
+          </p>
+
+          <h2 class="mt-2 font-quicksand text-[32px] font-bold leading-[46px] text-[#222222] sm:text-[46px] sm:leading-[58px]">
+            Educating Hearts, Empowering Futures.
+          </h2>
+
+          <p class="mt-4 text-base font-medium leading-[30px] text-[#666666]">
+            Mahesh Vidyasagar Memorial School Foundation is a Section 8
+            not-for-profit organisation committed to education, health, and
+            human dignity. Our work focuses on creating strong foundations for
+            lasting impact among underserved communities.
+          </p>
+
+          <p class="mt-4 text-base font-medium leading-[30px] text-[#666666]">
+            We work towards school sustainability, healthcare access,
+            nutrition, skill development, and community welfare while building
+            partnerships and opportunities for meaningful social impact.
+          </p>
+
+          <!-- Highlights -->
+          <div class="mt-8 grid grid-cols-3 border-y border-gray-200 py-5">
+            <div class="pr-3">
+              <p class="font-quicksand text-2xl font-bold text-[#F06C0B]">2026</p>
+              <p class="mt-1 text-xs font-medium text-[#666666]">Incorporated</p>
+            </div>
+            <div class="border-x border-gray-200 px-3">
+              <p class="font-quicksand text-2xl font-bold text-[#F06C0B]">Section 8</p>
+              <p class="mt-1 text-xs font-medium text-[#666666]">Not-for-Profit</p>
+            </div>
+            <div class="pl-3">
+              <p class="font-quicksand text-2xl font-bold text-[#F06C0B]">5 SDGs</p>
+              <p class="mt-1 text-xs font-medium text-[#666666]">Aligned With</p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/donate"
+              class="rounded-full border-2 border-primary bg-primary px-9 py-[15px] font-quicksand text-[15px] font-semibold text-white shadow-[0_7px_5px_-2px_rgba(0,0,0,0.11)] transition-colors hover:border-secondary hover:bg-secondary"
+            >
+              Support Our Mission
+            </a>
+            <a
+              href="/pages/contact-us.html"
+              class="rounded-full border-2 border-black bg-transparent px-9 py-[15px] font-quicksand text-[15px] font-semibold text-black transition-all hover:bg-black hover:text-white"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         MISSION & VISION
+    ========================================================== -->
+    <section class="relative overflow-hidden bg-[#fdf8f3] px-6 py-[100px] lg:px-[35px]">
+      <div class="pointer-events-none absolute -left-10 bottom-10 h-40 w-40 rounded-full border-[3px] border-dashed border-[#F06C0B]/30"></div>
+      <div class="dots-pattern pointer-events-none absolute right-6 top-10 h-40 w-40"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl">
+        <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+          Our Purpose
+        </p>
+        <h2 class="mt-2 text-center font-quicksand text-[36px] font-bold text-[#111111] sm:text-[50px]">
+          Mission &amp; Vision
+        </h2>
+
+        <div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+
+          <!-- Mission -->
+          <article class="group overflow-hidden rounded-[28px] bg-white shadow-lg">
+            <div class="relative h-[270px] overflow-hidden">
+              <img
+                src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/campaign-to-provide-1536x720-1-424x500_c.webp"
+                alt="Our mission"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+              <span class="absolute bottom-5 left-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#F06C0B] text-xl text-white shadow-lg">
+                <i class="fa-solid fa-bullseye"></i>
+              </span>
+            </div>
+            <div class="p-8 sm:p-10">
+              <h3 class="font-quicksand text-3xl font-bold text-[#222222]">Our Mission</h3>
+              <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+                To empower underserved communities through education, health,
+                nutrition, skill development, access, dignity, and opportunity.
+              </p>
+              <ul class="mt-6 flex flex-col gap-3 text-sm font-semibold text-[#222222]">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#F06C0B]"></i> Strengthen school sustainability and learning</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#F06C0B]"></i> Deliver health awareness and community care</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#F06C0B]"></i> Provide mid-day meals and food security</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#F06C0B]"></i> Build employable skills through training</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Vision -->
+          <article class="group overflow-hidden rounded-[28px] bg-navy text-white shadow-lg">
+            <div class="relative h-[270px] overflow-hidden">
+              <img
+                src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/Fighting-malnutrition-in-kids-of-Botswana-min-424x500_c.webp"
+                alt="Our vision"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent"></div>
+              <span class="absolute bottom-5 left-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#FBC032] text-xl text-navy shadow-lg">
+                <i class="fa-solid fa-eye"></i>
+              </span>
+            </div>
+            <div class="p-8 sm:p-10">
+              <h3 class="font-quicksand text-3xl font-bold">Our Vision</h3>
+              <p class="mt-3 text-base font-medium leading-7 text-white/80">
+                A society where every child and family, regardless of
+                background, has access to quality education, healthcare and
+                nutrition, and the opportunity to live with dignity.
+              </p>
+              <ul class="mt-6 flex flex-col gap-3 text-sm font-semibold">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#FBC032]"></i> Strong foundations for every child</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#FBC032]"></i> Healthy, nourished and confident communities</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#FBC032]"></i> Lasting impact through partnerships</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         STATS BAND
+    ========================================================== -->
+    <section class="bg-white px-6 pt-[90px] lg:px-[35px]">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[32px] bg-primary px-8 py-12 text-white">
+        <div class="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-white/10"></div>
+        <div class="pointer-events-none absolute -bottom-20 right-10 h-64 w-64 rounded-full bg-white/10"></div>
+
+        <div class="relative grid grid-cols-2 gap-y-10 text-center lg:grid-cols-4">
+          <div class="px-4">
+            <p class="font-quicksand text-5xl font-bold">5</p>
+            <p class="mt-2 text-sm font-semibold uppercase tracking-wider text-white/90">UN SDGs Aligned</p>
+          </div>
+          <div class="px-4 lg:border-l lg:border-white/30">
+            <p class="font-quicksand text-5xl font-bold">2026</p>
+            <p class="mt-2 text-sm font-semibold uppercase tracking-wider text-white/90">Year Incorporated</p>
+          </div>
+          <div class="px-4 lg:border-l lg:border-white/30">
+            <p class="font-quicksand text-5xl font-bold">4</p>
+            <p class="mt-2 text-sm font-semibold uppercase tracking-wider text-white/90">Focus Areas</p>
+          </div>
+          <div class="px-4 lg:border-l lg:border-white/30">
+            <p class="font-quicksand text-5xl font-bold">6</p>
+            <p class="mt-2 text-sm font-semibold uppercase tracking-wider text-white/90">Month Roadmap</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CORE VALUES
+    ========================================================== -->
+    <section class="bg-white px-6 pb-4 pt-[100px] lg:px-[35px]">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+          What We Stand For
+        </p>
+        <h2 class="mt-2 text-center font-quicksand text-[36px] font-bold text-[#111111] sm:text-[50px]">
+          Our Core Values
+        </h2>
+        <p class="mx-auto mt-3 max-w-2xl text-center font-manjari text-[17px] font-medium leading-[27px] text-dark">
+          The principles that guide every decision we make and every community we serve.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Dignity -->
+          <div class="group rounded-[20px] border-[3px] border-dashed p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #C017297A">
+            <div class="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-lg" style="background-color: #F9E8EA">
+              <i class="fa-solid fa-heart text-[30px]" style="color: #C01729"></i>
+            </div>
+            <h3 class="mt-6 font-quicksand text-2xl font-bold text-[#191919]">Dignity</h3>
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              Every person deserves respect, care and the chance to live with self-respect.
+            </p>
+          </div>
+
+          <!-- Education First -->
+          <div class="group rounded-[20px] border-[3px] border-dashed p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #E974227A">
+            <div class="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-lg" style="background-color: #FDF1E8">
+              <i class="fa-solid fa-graduation-cap text-[30px]" style="color: #E97422"></i>
+            </div>
+            <h3 class="mt-6 font-quicksand text-2xl font-bold text-[#191919]">Education First</h3>
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              Learning is the strongest foundation for a child's future and a community's progress.
+            </p>
+          </div>
+
+          <!-- Compassion -->
+          <div class="group rounded-[20px] border-[3px] border-dashed p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #1A73A77A">
+            <div class="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-lg" style="background-color: #E8F1F6">
+              <i class="fa-solid fa-hand-holding-heart text-[30px]" style="color: #1A73A7"></i>
+            </div>
+            <h3 class="mt-6 font-quicksand text-2xl font-bold text-[#191919]">Compassion</h3>
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              We listen, care and act with empathy for the children and families we serve.
+            </p>
+          </div>
+
+          <!-- Transparency -->
+          <div class="group rounded-[20px] border-[3px] border-dashed p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #FBC0327A">
+            <div class="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-lg" style="background-color: #FFF9EA">
+              <i class="fa-solid fa-eye text-[30px]" style="color: #FBC032"></i>
+            </div>
+            <h3 class="mt-6 font-quicksand text-2xl font-bold text-[#191919]">Transparency</h3>
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              We work openly and responsibly, so every supporter can see how their contribution creates impact.
+            </p>
+          </div>
+
+          <!-- Inclusion -->
+          <div class="group rounded-[20px] border-[3px] border-dashed p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #5B8C1F7A">
+            <div class="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-lg" style="background-color: #F3F7E8">
+              <i class="fa-solid fa-people-group text-[30px]" style="color: #5B8C1F"></i>
+            </div>
+            <h3 class="mt-6 font-quicksand text-2xl font-bold text-[#191919]">Inclusion</h3>
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              We reach underserved communities so no one is left behind because of background or circumstance.
+            </p>
+          </div>
+
+          <!-- Sustainability -->
+          <div class="group rounded-[20px] border-[3px] border-dashed p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-solid" style="border-color: #6B195A7A">
+            <div class="mx-auto flex h-[70px] w-[70px] items-center justify-center rounded-full transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-lg" style="background-color: #F6E9F3">
+              <i class="fa-solid fa-seedling text-[30px]" style="color: #6B195A"></i>
+            </div>
+            <h3 class="mt-6 font-quicksand text-2xl font-bold text-[#191919]">Sustainability</h3>
+            <p class="mt-3 text-base font-medium leading-7 text-[#666666]">
+              We build partnerships and programmes designed to create lasting change, not short-term relief.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FEATURE CAROUSEL — wide slides with captions
+    ========================================================== -->
+    <section class="bg-white px-6 pt-[100px] lg:px-[35px]">
+      <div class="mx-auto max-w-[1210px]">
+        <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+          Our Journey In Pictures
+        </p>
+        <h2 class="mt-2 text-center font-quicksand text-[36px] font-bold text-[#111111] sm:text-[50px]">
+          Moments That Inspire
+        </h2>
+
+        <div data-carousel data-autoplay="5000" class="relative mt-10">
+          <div class="overflow-hidden rounded-[28px] shadow-xl">
+            <div data-track class="flex transition-transform duration-700 ease-out">
+
+              <div class="relative h-[320px] w-full shrink-0 sm:h-[420px] lg:h-[520px]">
+                <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/donation-image-1536x708-1.webp" alt="Moments that inspire change" class="absolute inset-0 h-full w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+                  <span class="inline-block rounded-full bg-[#F06C0B] px-4 py-1 font-quicksand text-xs font-bold text-white">Community</span>
+                  <h3 class="mt-3 max-w-2xl font-quicksand text-xl font-bold text-white sm:text-3xl">Moments That Inspire Change and Bring Hearts Together</h3>
+                </div>
+              </div>
+
+              <div class="relative h-[320px] w-full shrink-0 sm:h-[420px] lg:h-[520px]">
+                <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/Eduscation-event-1536x708-1.webp" alt="Together we create impact" class="absolute inset-0 h-full w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+                  <span class="inline-block rounded-full bg-[#F06C0B] px-4 py-1 font-quicksand text-xs font-bold text-white">Education</span>
+                  <h3 class="mt-3 max-w-2xl font-quicksand text-xl font-bold text-white sm:text-3xl">Together We Create Impact and Build a Brighter Tomorrow</h3>
+                </div>
+              </div>
+
+              <div class="relative h-[320px] w-full shrink-0 sm:h-[420px] lg:h-[520px]">
+                <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/Event-1536x708-1.webp" alt="Join hope together" class="absolute inset-0 h-full w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+                  <span class="inline-block rounded-full bg-[#F06C0B] px-4 py-1 font-quicksand text-xs font-bold text-white">Hope</span>
+                  <h3 class="mt-3 max-w-2xl font-quicksand text-xl font-bold text-white sm:text-3xl">Join Hope, Together Every Step Counts</h3>
+                </div>
+              </div>
+
+              <div class="relative h-[320px] w-full shrink-0 sm:h-[420px] lg:h-[520px]">
+                <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/event-23-1536x708-1.webp" alt="Inspire supporters" class="absolute inset-0 h-full w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+                  <span class="inline-block rounded-full bg-[#F06C0B] px-4 py-1 font-quicksand text-xs font-bold text-white">Awareness</span>
+                  <h3 class="mt-3 max-w-2xl font-quicksand text-xl font-bold text-white sm:text-3xl">Inspire Supporters, Actively Build Awareness</h3>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button data-prev type="button" aria-label="Previous slide"
+            class="absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-dark shadow-lg transition-colors hover:bg-primary hover:text-white">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button data-next type="button" aria-label="Next slide"
+            class="absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-dark shadow-lg transition-colors hover:bg-primary hover:text-white">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div data-dots class="mt-6 flex justify-center gap-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FOCUS AREAS — image tiles
+    ========================================================== -->
+    <section class="bg-white px-6 pt-[90px] lg:px-[35px]">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+          What We Do
+        </p>
+        <h2 class="mt-2 text-center font-quicksand text-[36px] font-bold text-[#111111] sm:text-[50px]">
+          Where We Make A Difference
+        </h2>
+
+        <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Education -->
+          <a href="/our-work" class="group relative block h-[380px] overflow-hidden rounded-[24px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/campaign-to-provide-1536x720-1-424x500_c.webp" alt="Education" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <span class="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#C01729]"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="font-quicksand text-xl font-bold text-white">Education</h3>
+              <p class="mt-1 text-sm leading-6 text-white/85">School sustainability, teacher support and learning materials.</p>
+            </div>
+          </a>
+
+          <!-- Healthcare -->
+          <a href="/our-work" class="group relative block h-[380px] overflow-hidden rounded-[24px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/child-smile.webp" alt="Healthcare" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <span class="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#E97422]"><i class="fa-solid fa-hospital"></i></span>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="font-quicksand text-xl font-bold text-white">Healthcare</h3>
+              <p class="mt-1 text-sm leading-6 text-white/85">Health camps, screening and community awareness.</p>
+            </div>
+          </a>
+
+          <!-- Nutrition -->
+          <a href="/our-work" class="group relative block h-[380px] overflow-hidden rounded-[24px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/Fighting-malnutrition-in-kids-of-Botswana-min-424x500_c.webp" alt="Nutrition" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <span class="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#1A73A7]"><i class="fa-solid fa-utensils"></i></span>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="font-quicksand text-xl font-bold text-white">Nutrition</h3>
+              <p class="mt-1 text-sm leading-6 text-white/85">Mid-day meals and initiatives against food insecurity.</p>
+            </div>
+          </a>
+
+          <!-- Skills -->
+          <a href="/our-work" class="group relative block h-[380px] overflow-hidden rounded-[24px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/download-2-400x345_c.webp" alt="Skill development" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <span class="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#FBC032]"><i class="fa-solid fa-briefcase"></i></span>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="font-quicksand text-xl font-bold text-white">Skill Development</h3>
+              <p class="mt-1 text-sm leading-6 text-white/85">Expert-led online training and employable skills.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         GALLERY CAROUSEL — 3 per view on desktop
+    ========================================================== -->
+    <section class="bg-white px-6 pt-[100px] lg:px-[35px]">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+          Gallery
+        </p>
+        <h2 class="mt-2 text-center font-quicksand text-[36px] font-bold text-[#111111] sm:text-[50px]">
+          Glimpses Of Our Work
+        </h2>
+
+        <div data-carousel data-autoplay="4000" class="relative mt-10">
+          <div class="overflow-hidden">
+            <div data-track class="flex transition-transform duration-500 ease-out">
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/child-smile.webp" alt="Community" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Community</span>
+                </div>
+              </div>
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/campaign-to-provide-1536x720-1-424x500_c.webp" alt="Education" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Education</span>
+                </div>
+              </div>
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/Fighting-malnutrition-in-kids-of-Botswana-min-424x500_c.webp" alt="Nutrition" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Nutrition</span>
+                </div>
+              </div>
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child-smile.webp" alt="Smiles" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Smiles</span>
+                </div>
+              </div>
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/download-2-1-381x350_c.webp" alt="Care" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Care</span>
+                </div>
+              </div>
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/3-image-381x350_c.webp" alt="Hope" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Hope</span>
+                </div>
+              </div>
+
+              <div class="w-full shrink-0 p-3 sm:w-1/2 lg:w-1/3">
+                <div class="group relative h-[340px] overflow-hidden rounded-[20px]">
+                  <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/download-381x350_c.webp" alt="Protection" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-dark">Protection</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button data-prev type="button" aria-label="Previous slide"
+            class="absolute left-0 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-dark shadow-lg transition-colors hover:bg-primary hover:text-white sm:-left-3">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button data-next type="button" aria-label="Next slide"
+            class="absolute right-0 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-dark shadow-lg transition-colors hover:bg-primary hover:text-white sm:-right-3">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div data-dots class="mt-6 flex justify-center gap-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CTA BANNER
+    ========================================================== -->
+    <section class="bg-white px-6 pb-[100px] pt-[90px] lg:px-[35px]">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[32px]">
+        <img
+          src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/fundraising-ngo-new-slide-img.jpg"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-navy/85"></div>
+
+        <div class="relative z-10 px-8 py-16 text-center sm:py-20">
+          <p class="font-nunito text-sm font-bold uppercase tracking-[2px] text-[#FBC032]">
+            Join Us
+          </p>
+          <h2 class="mx-auto mt-3 max-w-3xl font-quicksand text-[32px] font-bold leading-[42px] text-white sm:text-[48px] sm:leading-[58px]">
+            Be A Part Of The Change
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base font-medium leading-7 text-white/80">
+            Your support helps us strengthen education, healthcare, nutrition
+            and skill development for underserved communities.
+          </p>
+
+          <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="/donate"
+              class="rounded-full border-2 border-primary bg-primary px-9 py-[15px] font-quicksand text-[15px] font-semibold text-white transition-colors hover:border-secondary hover:bg-secondary"
+            >
+              Donate Now
+            </a>
+            <a
+              href="/pages/contact-us.html"
+              class="rounded-full border-2 border-white bg-transparent px-9 py-[15px] font-quicksand text-[15px] font-semibold text-white transition-all hover:bg-white hover:text-navy"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (loaded by /js/include.js) -->
+  <div data-include="/components/footer.html"></div>
+
+  <script src="/js/include.js"></script>
+  <script src="/js/carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate | Mahesh Vidyasagar Memorial School Foundation</title>
+  <meta
+    name="description"
+    content="Support Mahesh Vidyasagar Memorial School Foundation via UPI or bank transfer. Your contribution helps us create a better future."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Tailwind (keep this config identical to index.html) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#F06C0B",
+            secondary: "#D95F08",
+            navy: "#12284C",
+            dark: "#222222",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            nunito: ["Nunito", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+            manjari: ["Manjari", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+      background: #ffffff;
+      color: #222222;
+    }
+    /* Header: hide the top announcement bar once the page is scrolled */
+    #site-header.is-scrolled #top-bar {
+      display: none !important;
+    }
+    .dots-pattern {
+      background-image: radial-gradient(rgba(240, 108, 11, 0.35) 2px, transparent 2px);
+      background-size: 18px 18px;
+    }
+  </style>
+
+  <!-- =========================================================
+       DONATE CONFIG — edit every donate-page field from here.
+       Field names match the spec: donationTitle, donationDescription,
+       upiEnabled, upiId, upiQrCode, bankTransferEnabled, accountName,
+       accountNumber, bankName, ifscCode, branchName, donationNote,
+       plus whatsappNumber for the screenshot link.
+  ========================================================== -->
+  <script>
+    const DONATE_CONFIG = {
+      donationTitle: "Donate & Make a Difference",
+      donationDescription:
+        "Your contribution helps us create a better future.",
+
+      upiEnabled: true,
+      upiId: "ngo@upi",
+      upiQrCode: "/public/images/upi-qr.jpeg", // UPI QR image
+
+      bankTransferEnabled: true,
+      accountName: "ABC Foundation",
+      accountNumber: "123456789012",
+      bankName: "State Bank of India",
+      ifscCode: "SBIN0001234",
+      branchName: "Kanpur Branch",
+
+      donationNote: "Please mention your name while making the donation.",
+
+      // WhatsApp number donors send their payment screenshot to (with country code, no spaces/+)
+      whatsappNumber: "919999999999",
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Header (loaded by /js/include.js) -->
+  <div data-include="/components/header.html"></div>
+
+  <main>
+    <!-- =========================================================
+         PAGE BANNER — image of a child, not just text
+    ========================================================== -->
+    <section class="relative overflow-hidden bg-[#fdf8f3] pb-0 pt-[175px]">
+      <div class="pointer-events-none absolute left-8 top-28 z-0 lg:left-16 lg:top-36">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-[#F06C0B] lg:h-20 lg:w-20">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+          />
+        </svg>
+      </div>
+
+      <div class="pointer-events-none absolute right-0 top-0 z-0 h-64 w-64 lg:h-96 lg:w-96">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full text-[#F06C0B]/30">
+          <path d="M 200 20 Q 160 70 130 110 Q 100 150 20 150" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+      </div>
+
+      <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 lg:grid-cols-2 lg:px-10">
+        <!-- Text -->
+        <div class="text-center lg:text-left">
+          <div class="inline-block rounded-full bg-[#F06C0B] px-6 py-2 font-quicksand text-sm font-semibold text-white">
+            Support Our Mission
+          </div>
+
+          <h1
+            id="donate-title"
+            class="mt-6 font-quicksand text-4xl font-bold leading-[1.1] text-black sm:text-5xl lg:text-[54px] lg:leading-[1.08]"
+          >
+            Donate &amp; Make a Difference
+          </h1>
+
+          <p
+            id="donate-description"
+            class="mx-auto mt-5 max-w-lg font-nunito text-base font-medium leading-7 text-gray-600 sm:text-lg lg:mx-0"
+          >
+            Your contribution helps us create a better future.
+          </p>
+
+          <nav aria-label="Breadcrumb" class="mt-6 flex items-center justify-center gap-2 font-nunito text-sm font-semibold lg:justify-start">
+            <a href="/" class="text-[#666666] transition-colors hover:text-primary">Home</a>
+            <span class="text-[#F06C0B]">/</span>
+            <span class="text-black">Donate</span>
+          </nav>
+
+          <a
+            href="#donate-options"
+            class="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-primary bg-primary px-8 py-3.5 font-quicksand text-sm font-semibold text-white shadow-[0_7px_5px_-2px_rgba(0,0,0,0.11)] transition-all hover:bg-[#d95f08]"
+          >
+            Donate Now <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Image: who the donor is helping -->
+        <div class="relative mx-auto max-w-md lg:mx-0 lg:max-w-none">
+          <div class="dots-pattern absolute -right-4 -top-4 h-28 w-28 rounded-2xl"></div>
+          <div class="relative overflow-hidden rounded-[28px] shadow-2xl">
+            <img
+              src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/child-smile.webp"
+              alt="A child who benefits from your donation"
+              class="h-[320px] w-full object-cover sm:h-[400px]"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-lg backdrop-blur-sm">
+              <p class="font-quicksand text-sm font-bold text-[#222222]">
+                "Every rupee you give brings a child closer to school, health and a future."
+              </p>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 hidden overflow-hidden rounded-2xl border-4 border-white shadow-xl sm:block">
+            <img
+              src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child-smile.webp"
+              alt="Another child supported by donors"
+              class="h-28 w-28 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         "YOU ARE DONATING FOR THIS" — impact strip with images
+    ========================================================== -->
+    <section class="bg-white px-6 pt-[80px] lg:px-[35px]">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-center font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">
+          Where Your Donation Goes
+        </p>
+        <h2 class="mt-2 text-center font-quicksand text-[32px] font-bold text-[#111111] sm:text-[44px]">
+          This Is Who You're Donating For
+        </h2>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="group relative h-[260px] overflow-hidden rounded-[20px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/campaign-to-provide-1536x720-1-424x500_c.webp" alt="Children in school supported by education donations" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <p class="font-quicksand text-lg font-bold text-white">Education</p>
+              <p class="mt-1 text-xs leading-5 text-white/80">Books, uniforms &amp; teacher support</p>
+            </div>
+          </div>
+
+          <div class="group relative h-[260px] overflow-hidden rounded-[20px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child.webp" alt="Child receiving healthcare through donor support" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <p class="font-quicksand text-lg font-bold text-white">Healthcare</p>
+              <p class="mt-1 text-xs leading-5 text-white/80">Health camps &amp; awareness drives</p>
+            </div>
+          </div>
+
+          <div class="group relative h-[260px] overflow-hidden rounded-[20px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/01/Fighting-malnutrition-in-kids-of-Botswana-min-424x500_c.webp" alt="Child receiving a nutritious meal funded by donations" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <p class="font-quicksand text-lg font-bold text-white">Nutrition</p>
+              <p class="mt-1 text-xs leading-5 text-white/80">Mid-day meals for hungry children</p>
+            </div>
+          </div>
+
+          <div class="group relative h-[260px] overflow-hidden rounded-[20px] shadow-md">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child-smile.webp" alt="Youth learning employable skills through donor-funded training" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <p class="font-quicksand text-lg font-bold text-white">Skill Development</p>
+              <p class="mt-1 text-xs leading-5 text-white/80">Training for a better livelihood</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiet reassurance strip -->
+        <div class="mx-auto mt-10 flex max-w-3xl flex-col items-center gap-4 rounded-[20px] bg-[#fdf8f3] px-8 py-6 text-center sm:flex-row sm:text-left">
+          <div class="flex -space-x-3">
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/child-smile.webp" alt="" class="h-12 w-12 rounded-full border-2 border-white object-cover" />
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child-smile.webp" alt="" class="h-12 w-12 rounded-full border-2 border-white object-cover" />
+            <img src="https://demos.lifelinetheme.com/wp-content/uploads/1/2025/09/boy-child.webp" alt="" class="h-12 w-12 rounded-full border-2 border-white object-cover" />
+          </div>
+          <p class="text-sm font-semibold leading-6 text-[#666666]">
+            Every donation, big or small, goes directly toward these four focus
+            areas — there's no minimum amount that's "too small" to matter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DONATION OPTIONS — UPI (left) | Bank Transfer (right)
+    ========================================================== -->
+    <section id="donate-options" class="scroll-mt-28 bg-white px-6 pb-[60px] pt-[90px] lg:px-[35px]">
+      <div class="mx-auto max-w-6xl text-center">
+        <p class="font-nunito text-sm font-bold uppercase tracking-[2px] text-[#F06C0B]">Ready When You Are</p>
+        <h2 class="mt-2 font-quicksand text-[32px] font-bold text-[#111111] sm:text-[44px]">Choose How You'd Like To Give</h2>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-6xl gap-8 lg:grid-cols-2">
+
+        <!-- ===================== UPI ===================== -->
+        <div id="upi-section" class="rounded-[24px] bg-[#fdf8f3] p-8 sm:p-10">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-[#F06C0B] text-2xl text-white">
+            <i class="fa-solid fa-qrcode"></i>
+          </span>
+
+          <h3 class="mt-5 font-quicksand text-[26px] font-bold leading-[34px] text-[#222222]">
+            Donate Via UPI
+          </h3>
+          <p class="mt-2 text-sm font-medium leading-6 text-[#666666]">
+            Scan the QR code with any UPI app, or pay directly using the UPI ID below.
+          </p>
+
+          <!-- QR code -->
+          <div class="mt-6 flex justify-center">
+            <div class="rounded-2xl border-4 border-white bg-white p-3 shadow-lg">
+              <img
+                id="upi-qr-image"
+                src="/public/images/upi-qr.png"
+                alt="UPI QR code for donations"
+                class="h-52 w-52 object-contain sm:h-56 sm:w-56"
+              />
+            </div>
+          </div>
+
+          <!-- UPI ID -->
+          <div class="mt-6">
+            <p class="font-quicksand text-xs font-bold uppercase tracking-wider text-[#666666]">UPI ID</p>
+            <div class="mt-2 flex items-center justify-between gap-3 rounded-[12px] border border-gray-200 bg-white px-5 py-4">
+              <span id="upi-id-text" class="break-all font-nunito text-base font-bold text-[#222222]">ngo@upi</span>
+              <button
+                type="button"
+                data-copy="ngo@upi"
+                class="copy-btn flex shrink-0 items-center gap-2 rounded-full border-2 border-primary px-4 py-2 font-quicksand text-xs font-bold text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                <i class="fa-regular fa-copy"></i> <span class="copy-btn-label">Copy</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== BANK TRANSFER ===================== -->
+        <div id="bank-section" class="rounded-[24px] bg-navy p-8 text-white sm:p-10">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-[#FBC032] text-2xl text-navy">
+            <i class="fa-solid fa-building-columns"></i>
+          </span>
+
+          <h3 class="mt-5 font-quicksand text-[26px] font-bold leading-[34px]">
+            Donate Via Bank Transfer
+          </h3>
+          <p class="mt-2 text-sm font-medium leading-6 text-white/70">
+            Use the account details below for an NEFT / RTGS / IMPS transfer.
+          </p>
+
+          <dl class="mt-6 flex flex-col divide-y divide-white/10">
+            <div class="flex items-center justify-between gap-4 py-3">
+              <div>
+                <dt class="font-quicksand text-xs font-bold uppercase tracking-wider text-white/60">Account Name</dt>
+                <dd id="bank-account-name" class="mt-1 text-base font-bold">ABC Foundation</dd>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 py-3">
+              <div>
+                <dt class="font-quicksand text-xs font-bold uppercase tracking-wider text-white/60">Account Number</dt>
+                <dd id="bank-account-number" class="mt-1 text-base font-bold">123456789012</dd>
+              </div>
+              <button
+                type="button"
+                data-copy="123456789012"
+                class="copy-btn flex shrink-0 items-center gap-2 rounded-full border-2 border-white/40 px-4 py-2 font-quicksand text-xs font-bold text-white transition-colors hover:border-white hover:bg-white hover:text-navy"
+              >
+                <i class="fa-regular fa-copy"></i> <span class="copy-btn-label">Copy</span>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 py-3">
+              <div>
+                <dt class="font-quicksand text-xs font-bold uppercase tracking-wider text-white/60">Bank Name</dt>
+                <dd id="bank-name" class="mt-1 text-base font-bold">State Bank of India</dd>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 py-3">
+              <div>
+                <dt class="font-quicksand text-xs font-bold uppercase tracking-wider text-white/60">IFSC Code</dt>
+                <dd id="bank-ifsc" class="mt-1 text-base font-bold">SBIN0001234</dd>
+              </div>
+              <button
+                type="button"
+                data-copy="SBIN0001234"
+                class="copy-btn flex shrink-0 items-center gap-2 rounded-full border-2 border-white/40 px-4 py-2 font-quicksand text-xs font-bold text-white transition-colors hover:border-white hover:bg-white hover:text-navy"
+              >
+                <i class="fa-regular fa-copy"></i> <span class="copy-btn-label">Copy</span>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 py-3">
+              <div>
+                <dt class="font-quicksand text-xs font-bold uppercase tracking-wider text-white/60">Branch Name</dt>
+                <dd id="bank-branch" class="mt-1 text-base font-bold">Kanpur Branch</dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Donation note -->
+      <div class="mx-auto mt-8 flex max-w-6xl items-start gap-3 rounded-[16px] bg-[#FFF9EA] px-6 py-4">
+        <i class="fa-solid fa-circle-info mt-0.5 text-[#FBC032]"></i>
+        <p id="donation-note" class="text-sm font-semibold leading-6 text-[#5c4a00]">
+          Please mention your name while making the donation.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SEND PAYMENT SCREENSHOT — WhatsApp
+    ========================================================== -->
+    <section class="bg-white px-6 pb-[100px] lg:px-[35px]">
+      <div class="mx-auto max-w-6xl">
+        <div class="flex flex-col items-center gap-6 rounded-[24px] bg-[#E9F9EC] px-8 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div class="flex items-center gap-4">
+            <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white">
+              <i class="fa-brands fa-whatsapp"></i>
+            </span>
+            <div>
+              <h3 class="font-quicksand text-xl font-bold text-[#222222]">
+                Sent your donation? Share the screenshot.
+              </h3>
+              <p class="mt-1 text-sm font-medium leading-6 text-[#666666]">
+                After paying via UPI or bank transfer, send us the payment screenshot on
+                WhatsApp so we can confirm and issue your receipt.
+              </p>
+            </div>
+          </div>
+
+          <a
+            id="whatsapp-screenshot-link"
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 font-quicksand text-[15px] font-bold text-white shadow-[0_7px_5px_-2px_rgba(0,0,0,0.11)] transition-colors hover:bg-[#1DA851]"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i> Send Screenshot
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (loaded by /js/include.js) -->
+  <div data-include="/components/footer.html"></div>
+
+  <!-- Site-wide header/footer loader -->
+  <script src="/js/include.js"></script>
+
+  <!-- =========================================================
+       Page script — everything this page needs, in one place:
+       1) Fills the page from DONATE_CONFIG (defined in <head>)
+       2) Hides the UPI / bank sections if disabled in the config
+       3) Copy-to-clipboard for UPI ID / account number / IFSC
+       4) Builds the WhatsApp "send screenshot" link
+  ========================================================== -->
+  <script>
+    (function () {
+      var c = DONATE_CONFIG;
+
+      // 1) Fill text/image content from config
+      document.getElementById("donate-title").textContent = c.donationTitle;
+      document.getElementById("donate-description").textContent = c.donationDescription;
+
+      document.getElementById("upi-qr-image").src = c.upiQrCode;
+      document.getElementById("upi-id-text").textContent = c.upiId;
+      document.querySelector('#upi-section [data-copy]').setAttribute("data-copy", c.upiId);
+
+      document.getElementById("bank-account-name").textContent = c.accountName;
+      document.getElementById("bank-account-number").textContent = c.accountNumber;
+      document.getElementById("bank-name").textContent = c.bankName;
+      document.getElementById("bank-ifsc").textContent = c.ifscCode;
+      document.getElementById("bank-branch").textContent = c.branchName;
+
+      var bankCopyBtns = document.querySelectorAll('#bank-section [data-copy]');
+      bankCopyBtns[0].setAttribute("data-copy", c.accountNumber);
+      bankCopyBtns[1].setAttribute("data-copy", c.ifscCode);
+
+      document.getElementById("donation-note").textContent = c.donationNote;
+
+      // 2) Toggle sections on/off per config
+      var upiSection = document.getElementById("upi-section");
+      if (upiSection && !c.upiEnabled) upiSection.classList.add("hidden");
+
+      var bankSection = document.getElementById("bank-section");
+      if (bankSection && !c.bankTransferEnabled) bankSection.classList.add("hidden");
+
+      // 3) Copy-to-clipboard buttons
+      function fallbackCopy(value, done) {
+        var ta = document.createElement("textarea");
+        ta.value = value;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          document.execCommand("copy");
+          done();
+        } catch (err) {
+          console.error("[donate] Copy failed", err);
+        }
+        document.body.removeChild(ta);
+      }
+
+      document.querySelectorAll(".copy-btn").forEach(function (btn) {
+        var label = btn.querySelector(".copy-btn-label");
+        var defaultText = label.textContent;
+
+        btn.addEventListener("click", function () {
+          var value = btn.getAttribute("data-copy");
+          if (!value) return;
+
+          function showCopied() {
+            label.textContent = "Copied";
+            setTimeout(function () {
+              label.textContent = defaultText;
+            }, 1800);
+          }
+
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(value).then(showCopied).catch(function () {
+              fallbackCopy(value, showCopied);
+            });
+          } else {
+            fallbackCopy(value, showCopied);
+          }
+        });
+      });
+
+      // 4) WhatsApp "send screenshot" link
+      var waLink = document.getElementById("whatsapp-screenshot-link");
+      var digits = (c.whatsappNumber || "").replace(/[^\d]/g, "");
+      if (waLink) {
+        if (digits) {
+          var text = encodeURIComponent(
+            "Hi, I have just made a donation to " + (c.accountName || "your organisation") +
+              ". Sharing the payment screenshot here."
+          );
+          waLink.href = "https://wa.me/" + digits + "?text=" + text;
+        } else {
+          waLink.classList.add("hidden");
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
